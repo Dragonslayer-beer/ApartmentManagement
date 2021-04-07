@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="rooms" msprop:Generator_TableClassName="roomsDataTable" msprop:Generator_TableVarName="tablerooms" msprop:Generator_TablePropName="rooms" msprop:Generator_RowDeletingName="roomsRowDeleting" msprop:Generator_RowChangingName="roomsRowChanging" msprop:Generator_RowEvHandlerName="roomsRowChangeEventHandler" msprop:Generator_RowDeletedName="roomsRowDeleted" msprop:Generator_UserTableName="rooms" msprop:Generator_RowChangedName="roomsRowChanged" msprop:Generator_RowEvArgName="roomsRowChangeEvent" msprop:Generator_RowClassName="roomsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idroom" msprop:Generator_ColumnVarNameInTable="columnidroom" msprop:Generator_ColumnPropNameInRow="idroom" msprop:Generator_ColumnPropNameInTable="idroomColumn" msprop:Generator_UserColumnName="idroom" type="xs:string" minOccurs="0" />
+              <xs:element name="rname" msprop:Generator_ColumnVarNameInTable="columnrname" msprop:Generator_ColumnPropNameInRow="rname" msprop:Generator_ColumnPropNameInTable="rnameColumn" msprop:Generator_UserColumnName="rname" type="xs:string" minOccurs="0" />
+              <xs:element name="residents" msprop:Generator_ColumnVarNameInTable="columnresidents" msprop:Generator_ColumnPropNameInRow="residents" msprop:Generator_ColumnPropNameInTable="residentsColumn" msprop:Generator_UserColumnName="residents" type="xs:string" minOccurs="0" />
+              <xs:element name="idroomtype" msprop:Generator_ColumnVarNameInTable="columnidroomtype" msprop:Generator_ColumnPropNameInRow="idroomtype" msprop:Generator_ColumnPropNameInTable="idroomtypeColumn" msprop:Generator_UserColumnName="idroomtype" type="xs:string" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="waterBill" msprop:Generator_ColumnVarNameInTable="columnwaterBill" msprop:Generator_ColumnPropNameInRow="waterBill" msprop:Generator_ColumnPropNameInTable="waterBillColumn" msprop:Generator_UserColumnName="waterBill" type="xs:string" minOccurs="0" />
+              <xs:element name="elecBill" msprop:Generator_ColumnVarNameInTable="columnelecBill" msprop:Generator_ColumnPropNameInRow="elecBill" msprop:Generator_ColumnPropNameInTable="elecBillColumn" msprop:Generator_UserColumnName="elecBill" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

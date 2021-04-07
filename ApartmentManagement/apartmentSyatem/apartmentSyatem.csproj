@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{854EA0B7-16BA-496B-A5A2-446F6530D169}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>apartmentSyatem</RootNamespace>
+    <AssemblyName>apartmentSyatem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.23\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2020.0.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.23\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.23\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class_User.cs" />
+    <Compile Include="cry_reportAllroom.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cry_reportAllroom.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="flogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flogin.Designer.cs">
+      <DependentUpon>flogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_manageRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_manageRoom.Designer.cs">
+      <DependentUpon>Fm_manageRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_showAlluser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_showAlluser.Designer.cs">
+      <DependentUpon>Fm_showAlluser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AddBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AddBills.Designer.cs">
+      <DependentUpon>Frm_AddBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_main_addCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_main_addCatalog.Designer.cs">
+      <DependentUpon>Frm_main_addCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_main_addMitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_main_addMitter.Designer.cs">
+      <DependentUpon>Frm_main_addMitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_main_addNewRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_main_addNewRoom.Designer.cs">
+      <DependentUpon>Frm_main_addNewRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_bill_maintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bill_maintain.Designer.cs">
+      <DependentUpon>frm_bill_maintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_bill_water_elec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bill_water_elec.Designer.cs">
+      <DependentUpon>frm_bill_water_elec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_main.Designer.cs">
+      <DependentUpon>Frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_manage_AllRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_manage_AllRoom.Designer.cs">
+      <DependentUpon>Frm_manage_AllRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_manage_build.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_build.Designer.cs">
+      <DependentUpon>frm_manage_build.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_manage_exit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_manage_exit.Designer.cs">
+      <DependentUpon>Frm_manage_exit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_manage_rented.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_rented.Designer.cs">
+      <DependentUpon>frm_manage_rented.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_manage_renting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_renting.Designer.cs">
+      <DependentUpon>frm_manage_renting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_manage_Roombooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_manage_Roombooking.Designer.cs">
+      <DependentUpon>Frm_manage_Roombooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_manage_rent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_manage_rent.Designer.cs">
+      <DependentUpon>frm_manage_rent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pay-water-elec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pay-water-elec.Designer.cs">
+      <DependentUpon>frm_pay-water-elec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_report.Designer.cs">
+      <DependentUpon>Frm_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_report_allRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_report_allRooms.Designer.cs">
+      <DependentUpon>frm_report_allRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Add_manageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Add_manageUser.Designer.cs">
+      <DependentUpon>F_Add_manageUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="cry_reportAllroom.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cry_reportAllroom.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flogin.lo.resx">
+      <DependentUpon>flogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flogin.resx">
+      <DependentUpon>flogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_manageRoom.resx">
+      <DependentUpon>Fm_manageRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_showAlluser.resx">
+      <DependentUpon>Fm_showAlluser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AddBills.resx">
+      <DependentUpon>Frm_AddBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_main_addCatalog.resx">
+      <DependentUpon>Frm_main_addCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_main_addMitter.resx">
+      <DependentUpon>Frm_main_addMitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_main_addNewRoom.resx">
+      <DependentUpon>Frm_main_addNewRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_bill_maintain.resx">
+      <DependentUpon>frm_bill_maintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_bill_water_elec.resx">
+      <DependentUpon>frm_bill_water_elec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_main.resx">
+      <DependentUpon>Frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_manage_AllRoom.resx">
+      <DependentUpon>Frm_manage_AllRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_build.resx">
+      <DependentUpon>frm_manage_build.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_manage_exit.resx">
+      <DependentUpon>Frm_manage_exit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_rented.resx">
+      <DependentUpon>frm_manage_rented.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_renting.resx">
+      <DependentUpon>frm_manage_renting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_manage_Roombooking.resx">
+      <DependentUpon>Frm_manage_Roombooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_manage_rent.resx">
+      <DependentUpon>frm_manage_rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pay-water-elec.resx">
+      <DependentUpon>frm_pay-water-elec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_report.resx">
+      <DependentUpon>Frm_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_report_allRooms.resx">
+      <DependentUpon>frm_report_allRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Add_manageUser.resx">
+      <DependentUpon>F_Add_manageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_password.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46cba9f93a3d437db6d42f4bcd1a5f5f.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_rss.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_great_britain.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_laos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ae771b7e8140ed86eb38e966f0374a73.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_apartment.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_single_bed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_alarm.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cash.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_file.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ae771b7e8140ed86eb38e966f0374a731.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide7.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide8.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_1576.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TP-Accom-LuxuryDoubleRoom-Dook-013-1080x675.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
